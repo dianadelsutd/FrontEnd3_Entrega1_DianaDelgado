@@ -5,8 +5,9 @@ import Form from './Components/Form';
 function App() {
   return (
     <>
-      <Card />
+      <h1>Carga de estudiantes</h1>
       <Form />
+      <Card />
     </>
   );
 }
