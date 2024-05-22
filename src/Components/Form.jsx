@@ -6,7 +6,7 @@ const Form = () => {
   };
   return (
     <>
-      <p>Formulario generico</p>
+      <p>FORMULARIO GENERICO: </p>
       <form onSubmit={handleSubmit}>
         <label>Nombre</label>
         <input type='text' />
