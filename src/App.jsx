@@ -8,9 +8,6 @@ function App() {
   return (
     <>
       <Form />
-      {/*  {estudiantes.map((estudiante) => (
-        <Card key={estudiante.id} estudiante={estudiante} />
-      ))} */}
     </>
   );
 }
