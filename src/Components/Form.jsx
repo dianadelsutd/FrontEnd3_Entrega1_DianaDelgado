@@ -13,6 +13,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (
       cliente.nombre.trim().length > 2 &&
       cliente.nombre.trimStart() === cliente.nombre &&
@@ -22,6 +23,7 @@ const Form = () => {
       setError(false);
     } else {
       setError(true);
+      setShow(false);
     }
 
     console.log('nombre al enviar:', cliente.nombre);
@@ -29,12 +31,13 @@ const Form = () => {
   };
   return (
     <>
-      <h3>Ingresa tu película favorita</h3>
+      <h3>¿Cuál es tu película favorita?</h3>
       <form onSubmit={handleSubmit}>
         <label>Nombre</label>
         <input
           type='text'
           value={cliente.nombre}
+          placeholder='Ingresa tu nombre'
           onChange={(event) =>
             setCliente({ ...cliente, nombre: event.target.value })
           }
@@ -42,13 +45,13 @@ const Form = () => {
         <label>Pelicula</label>
         <input
           type='text'
+          placeholder='Ingresa tu película favorita'
           value={cliente.pelicula}
           onChange={(event) =>
             setCliente({ ...cliente, pelicula: event.target.value })
           }
         />
         <button>Enviar</button>
-        {/* <button>Cancelar</button> */}
       </form>
       {show && <Card cliente={cliente} />}
       {error && <ErrorMsj />}
